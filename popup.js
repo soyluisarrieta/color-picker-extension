@@ -73,12 +73,10 @@ async function renderHistory() {
       navigator.clipboard.writeText(hex).then(() => {
         const hexLabel = li.querySelector(".color-hex");
         const originalText = hexLabel.textContent;
-        hexLabel.textContent = "Copied!";
-        hexLabel.style.color = "#10b981";
+        hexLabel.textContent = "COPIED";
 
         setTimeout(() => {
           hexLabel.textContent = originalText;
-          hexLabel.style.color = "";
         }, 2000);
       });
     });
